@@ -1,0 +1,23 @@
+{    
+    "name": "rm_csdn_ad",  
+    "manifest_version":2,  
+    "version": "1.0",    
+    "description": "rm_csdn_ad ",    
+    "browser_action": {    
+       // "default_icon": "icon.png" ,  
+       "default_title": "My Task List",  
+        "default_popup": "popup.html"  
+     },  
+     "background": {  
+        "page": "background.html"  
+      },  
+     "content_scripts": [{  
+         "matches": ["http://blog.csdn.net/*","http://www.nh87.cn/*"],
+         "js": ["jquery.js", "test.js"],   
+         "run_at": "document_end",  
+         "all_frames": true   
+    }],  
+    "permissions": [     
+     "tabs", "http://blog.csdn.net/*"
+    ]     
+}  
