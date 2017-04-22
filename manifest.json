@@ -12,12 +12,17 @@
         "page": "background.html"  
       },  
      "content_scripts": [{  
-         "matches": ["http://blog.csdn.net/*","http://www.nh87.cn/*"],
-         "js": ["jquery.js", "test.js"],   
-         "run_at": "document_end",  
+         "matches": [
+            "http://blog.csdn.net/*",
+            "http://www.nh87.cn/*",
+            "http://www.sis001.com/*",
+            "https://www.tube8.com/*"
+         ],
+         "js": ["resource/jquery.js", "test.js"],   
+         "run_at": "document_start",  
          "all_frames": true   
     }],  
     "permissions": [     
-     "tabs", "http://blog.csdn.net/*"
+    "storage","tabs", "http://*/*", "https://*/*"
     ]     
 }  
