@@ -4,7 +4,7 @@
     "version": "1.0",    
     "description": "rm_csdn_ad ",    
     "browser_action": {    
-       // "default_icon": "icon.png" ,  
+       "default_icon": "resource/fss.png" ,  
        "default_title": "My Task List",  
         "default_popup": "popup.html"  
      },  
@@ -16,13 +16,15 @@
             "http://blog.csdn.net/*",
             "http://www.nh87.cn/*",
             "http://www.sis001.com/*",
-            "https://www.tube8.com/*"
+            "https://www.tube8.com/*",
+            "https://www.torrentkitty.tv/*",
+            "https://www.baidu.com/*"
          ],
          "js": ["resource/jquery.js", "test.js"],   
          "run_at": "document_start",  
          "all_frames": true   
     }],  
     "permissions": [     
-    "storage","tabs", "http://*/*", "https://*/*"
+    "storage","tabs", "webRequest","http://*/*", "https://*/*","webRequestBlocking"
     ]     
 }  

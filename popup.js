@@ -14,6 +14,7 @@ function click(e) {
 //   $(this).click(click)
 //  })
 // });
+ //第一打开popup时
  chrome.storage.local.get(null, function(config) {
     adSwitch = config.switch;
     if (adSwitch) {
@@ -24,7 +25,7 @@ function click(e) {
         $('#openRmAd').removeClass('active');
       }
    });
-
+//点击时
 document.addEventListener('DOMContentLoaded', function () {
  $('.switch').each(function(){
   $(this).click(function(){
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('#closeRmAd').addClass('active');
         $('#openRmAd').removeClass('active');
       }
+      window.close();
    });
   
   });
